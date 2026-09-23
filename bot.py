@@ -23,7 +23,8 @@ from dotenv import load_dotenv
 # Загрузка переменных окружения
 load_dotenv()
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8835724938:AAG1HQdvarR5jFXDe7o1mPHp2r7bdZXhEhM")
+# Новый перевыпущенный токен и ID администратора
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8835724938:AAHwWy0uAtplPceDL-ujhZhLGZKpD_2bEdE")
 ADMIN_CHAT_ID = int(os.getenv("ADMIN_CHAT_ID", "5014057300"))
 
 logging.basicConfig(level=logging.INFO)
@@ -741,7 +742,7 @@ async def process_details(message: Message, state: FSMContext):
 # 9. ТОЧКА ВХОДА
 # ==========================================
 async def main():
-    logger.info("FORTA Clean Bot starting without emergency keyword triggers...")
+    logger.info("FORTA Clean Bot starting with new token...")
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
