@@ -33,111 +33,9 @@ bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
 
 # ==========================================
-# 1. ПОЛНЫЙ КАТАЛОГ С ФОТО С САЙТА FORTA-USA.COM
+# 1. ПРОВЕРЕННЫЙ КАТАЛОГ С ПОДДЕРЖИВАЕМЫМИ JPG/PNG ФОТО
 # ==========================================
 CATALOG_ITEMS = [
-    {
-        "id": "classic_7200",
-        "category": "residential",
-        "photo": "https://forta-usa.com/wp-content/uploads/2026/03/ClassicSafe_7200_Main.avif",
-        "en": {
-            "title": "Hörmann Classic Safe 7200",
-            "desc": (
-                "<b>Series:</b> Residential Sectional Steel\n"
-                "• <b>Thermal Core:</b> German polyurethane insulation R-18.4\n"
-                "• <b>Hardware:</b> High-cycle 50,000 cycles torsion springs\n"
-                "• <b>Wind Resistance:</b> Heavy-duty perimeter weather seals\n"
-                "• <b>Best For:</b> Premium residences in Sacramento & Granite Bay"
-            )
-        },
-        "ru": {
-            "title": "Hörmann Classic Safe 7200",
-            "desc": (
-                "<b>Серия:</b> Премиальные секционные стальные ворота\n"
-                "• <b>Теплоизоляция:</b> Полиуретановое ядро R-18.4 (защита от жары)\n"
-                "• <b>Ресурс пружин:</b> 50 000 рабочих циклов\n"
-                "• <b>Герметизация:</b> Усиленный уплотнительный контур по периметру\n"
-                "• <b>Идеально для:</b> Особняков в Гранит-Бэй и Сакраменто"
-            )
-        },
-        "es": {
-            "title": "Hörmann Classic Safe 7200",
-            "desc": (
-                "<b>Serie:</b> Puertas de garaje seccionales de acero\n"
-                "• <b>Aislamiento térmico:</b> Núcleo de poliuretano R-18.4\n"
-                "• <b>Muelles de torsión:</b> 50,000 ciclos de alta durabilidad\n"
-                "• <b>Resistencia:</b> Sellado perimetral contra viento y calor\n"
-                "• <b>Ideal para:</b> Residencias en Sacramento y Granite Bay"
-            )
-        }
-    },
-    {
-        "id": "deco_5250",
-        "category": "residential",
-        "photo": "https://forta-usa.com/wp-content/uploads/2026/03/DecoSafe_5250_Main.avif",
-        "en": {
-            "title": "Hörmann Deco Safe 5250",
-            "desc": (
-                "<b>Series:</b> Architectural Flush Panels\n"
-                "• <b>Design:</b> Minimalist smooth panels with glazed inserts\n"
-                "• <b>Safety:</b> Heavy-gauge steel structural protection\n"
-                "• <b>Thermal Break:</b> Advanced energy-efficient core\n"
-                "• <b>Best For:</b> Contemporary & modern luxury facades"
-            )
-        },
-        "ru": {
-            "title": "Hörmann Deco Safe 5250",
-            "desc": (
-                "<b>Серия:</b> Архитектурные гладкие панели Flush Design\n"
-                "• <b>Дизайн:</b> Минималистичные полотна с остеклением\n"
-                "• <b>Безопасность:</b> Сталь повышенной толщины против взлома\n"
-                "• <b>Теплосбережение:</b> Энергоэффективный немецкий наполнитель\n"
-                "• <b>Идеально для:</b> Современных домов в стиле хай-тек и модерн"
-            )
-        },
-        "es": {
-            "title": "Hörmann Deco Safe 5250",
-            "desc": (
-                "<b>Serie:</b> Paneles arquitectónicos lisos Flush\n"
-                "• <b>Diseño:</b> Paneles modernos con inserciones de vidrio\n"
-                "• <b>Seguridad:</b> Acero reforzado para máxima protección\n"
-                "• <b>Aislamiento:</b> Núcleo de alta eficiencia energética\n"
-                "• <b>Ideal para:</b> Fachadas residenciales contemporáneas"
-            )
-        }
-    },
-    {
-        "id": "modern_sec",
-        "category": "residential",
-        "photo": "https://forta-usa.com/wp-content/uploads/2026/03/garage-door-2.avif",
-        "en": {
-            "title": "Hörmann Modern Sectional",
-            "desc": (
-                "<b>Series:</b> Contemporary Thermal Residence\n"
-                "• <b>Aesthetic:</b> Anthracite / Graphite matte architectural finish\n"
-                "• <b>Operation:</b> Ultra-quiet nylon roller tracking (&lt;45 dB)\n"
-                "• <b>Durability:</b> Scratch-resistant multi-layer powder coat"
-            )
-        },
-        "ru": {
-            "title": "Hörmann Modern Sectional",
-            "desc": (
-                "<b>Серия:</b> Современные термоизолированные ворота\n"
-                "• <b>Покрытие:</b> Графитовый матовый цвет Anthracite\n"
-                "• <b>Ход:</b> Бесшумные нейлоновые ролики на подшипниках (&lt;45 dB)\n"
-                "• <b>Стойкость:</b> Защита от царапин и выгорания на солнце"
-            )
-        },
-        "es": {
-            "title": "Hörmann Modern Sectional",
-            "desc": (
-                "<b>Serie:</b> Seccional moderna con aislamiento térmico\n"
-                "• <b>Acabado:</b> Color grafito mate resistente a rayos UV\n"
-                "• <b>Mecanismo:</b> Rodillos de nylon ultra silenciosos (&lt;45 dB)\n"
-                "• <b>Durabilidad:</b> Revestimiento resistente a la intemperie"
-            )
-        }
-    },
     {
         "id": "frameless_7400",
         "category": "residential",
@@ -149,17 +47,17 @@ CATALOG_ITEMS = [
                 "• <b>Glass:</b> Double-pane insulated tinted safety glass\n"
                 "• <b>Frame:</b> Anodized aluminum with concealed fasteners\n"
                 "• <b>Wind Load:</b> Engineered for up to 120 MPH gusts\n"
-                "• <b>Best For:</b> Luxury residences in Folsom Lake & El Dorado Hills"
+                "• <b>Best For:</b> Luxury residences in Folsom Lake &amp; Granite Bay"
             )
         },
         "ru": {
             "title": "Hörmann 7400 / Frameless Glass",
             "desc": (
-                "<b>Серия:</b> Панорамное ударопрочное стекло Full-View\n"
-                "• <b>Стекло:</b> Двойной энергосберегающий тонированный стеклопакет\n"
+                "<b>Серия:</b> Панорамное тонированное стекло Full-View\n"
+                "• <b>Стекло:</b> Двойной энергосберегающий безопасный стеклопакет\n"
                 "• <b>Каркас:</b> Анодированный алюминий со скрытыми креплениями\n"
                 "• <b>Ветровая стойкость:</b> Расчетная нагрузка до 120 MPH\n"
-                "• <b>Идеально для:</b> Вилл в Фолсом-Лейк и Эл-Дорадо Хиллс"
+                "• <b>Идеально для:</b> Вилл в Фолсом-Лейк и Гранит-Бэй"
             )
         },
         "es": {
@@ -169,7 +67,42 @@ CATALOG_ITEMS = [
                 "• <b>Vidrio:</b> Doble acristalamiento templado de seguridad\n"
                 "• <b>Marco:</b> Aluminio anodizado con fijaciones ocultas\n"
                 "• <b>Carga de viento:</b> Resistencia certificada hasta 120 MPH\n"
-                "• <b>Ideal para:</b> Residencias de lujo en Folsom y El Dorado Hills"
+                "• <b>Ideal para:</b> Residencias de lujo en Folsom y Granite Bay"
+            )
+        }
+    },
+    {
+        "id": "flush_7200",
+        "category": "residential",
+        "photo": "https://forta-usa.com/wp-content/uploads/2026/03/7400_BC44_Black-scaled.jpg",
+        "en": {
+            "title": "Hörmann Classic Safe 7200 / Flush Steel",
+            "desc": (
+                "<b>Series:</b> Contemporary Architectural Sectional\n"
+                "• <b>Thermal Core:</b> German polyurethane insulation R-18.4\n"
+                "• <b>Hardware:</b> High-cycle 50,000 cycles torsion springs\n"
+                "• <b>Finish:</b> Graphite matte architectural powder-coat\n"
+                "• <b>Best For:</b> Premium custom homes across Sacramento"
+            )
+        },
+        "ru": {
+            "title": "Hörmann Classic Safe 7200 / Flush Steel",
+            "desc": (
+                "<b>Серия:</b> Современные архитектурные секционные ворота\n"
+                "• <b>Теплоизоляция:</b> Полиуретановое ядро R-18.4 (защита от жары)\n"
+                "• <b>Ресурс пружин:</b> 50 000 рабочих циклов\n"
+                "• <b>Покрытие:</b> Матовый графитовый архитектурный слой\n"
+                "• <b>Идеально для:</b> Особняков в Сакраменто и Розвилле"
+            )
+        },
+        "es": {
+            "title": "Hörmann Classic Safe 7200 / Flush Steel",
+            "desc": (
+                "<b>Serie:</b> Puertas de garaje seccionales arquitectónicas\n"
+                "• <b>Aislamiento térmico:</b> Núcleo de poliuretano R-18.4\n"
+                "• <b>Muelles de torsión:</b> 50,000 ciclos de alta durabilidad\n"
+                "• <b>Acabado:</b> Pintura en polvo arquitectónica color grafito\n"
+                "• <b>Ideal para:</b> Residencias en Sacramento y Roseville"
             )
         }
     },
@@ -184,7 +117,7 @@ CATALOG_ITEMS = [
                 "• <b>Wood:</b> Solid natural cedar mounted on commercial steel subframe\n"
                 "• <b>Protection:</b> Marine-grade UV oil weatherproofing\n"
                 "• <b>Springs:</b> Custom-weighted heavy-duty torsion assembly\n"
-                "• <b>Aesthetic:</b> Estate craftsman styling"
+                "• <b>Aesthetic:</b> Estate craftsman styling for El Dorado Hills"
             )
         },
         "ru": {
@@ -194,7 +127,7 @@ CATALOG_ITEMS = [
                 "• <b>Конструкция:</b> Натуральный кедр на усиленном стальном каркасе\n"
                 "• <b>Обработка:</b> Глубокая пропитка UV-маслами от рассыхания\n"
                 "• <b>Механика:</b> Усиленный торсионный вал под вес массива\n"
-                "• <b>Стиль:</b> Классическая калифорнийская усадьба"
+                "• <b>Стиль:</b> Классическая калифорнийская усадьба (Эл-Дорадо Хиллс)"
             )
         },
         "es": {
@@ -208,34 +141,34 @@ CATALOG_ITEMS = [
         }
     },
     {
-        "id": "thermosafe_door",
+        "id": "stockbridge_3400",
         "category": "residential",
-        "photo": "https://forta-usa.com/wp-content/uploads/2026/03/front-door-ThermoSafe-style189-CH703.jpeg",
+        "photo": "https://forta-usa.com/wp-content/uploads/2026/03/3400_White_Ranch_Stockbridge-scaled.jpg",
         "en": {
-            "title": "ThermoSafe Entrance Systems",
+            "title": "Hörmann Carriage Stockbridge",
             "desc": (
-                "<b>Series:</b> High-Security German Entrance Doors\n"
-                "• <b>Locking:</b> Multi-point automatic mechanical deadbolts\n"
-                "• <b>Insulation:</b> Complete thermal break matching garage sectionals\n"
-                "• <b>Hardware:</b> Stainless steel pull bars & digital access"
+                "<b>Series:</b> Traditional Carriage House Styling\n"
+                "• <b>Design:</b> Decorative hardware and classic top-row window inserts\n"
+                "• <b>Insulation:</b> High-density thermal polyurethane foam\n"
+                "• <b>Seals:</b> Weather-tight perimeter rubber compression seals"
             )
         },
         "ru": {
-            "title": "Входные двери ThermoSafe",
+            "title": "Hörmann Carriage Stockbridge",
             "desc": (
-                "<b>Серия:</b> Немецкие входные двери высшей безопасности\n"
-                "• <b>Замки:</b> Многоточечный автоматический ригельный замок\n"
-                "• <b>Терморазрыв:</b> Полная изоляция в едином дизайне с гаражными воротами\n"
-                "• <b>Фурнитура:</b> Штанги из нержавеющей стали и смарт-замки"
+                "<b>Серия:</b> Традиционный стиль Carriage House\n"
+                "• <b>Дизайн:</b> Декоративная кованая фурнитура и верхнее остекление\n"
+                "• <b>Изоляция:</b> Плотный термоизолирующий пенополиуретан\n"
+                "• <b>Уплотнители:</b> Защита от пыли, ветра и осадков по периметру"
             )
         },
         "es": {
-            "title": "Puertas de Entrada ThermoSafe",
+            "title": "Hörmann Carriage Stockbridge",
             "desc": (
-                "<b>Serie:</b> Puertas alemanas de alta seguridad\n"
-                "• <b>Cerraduras:</b> Cierre multipunto de seguridad automática\n"
-                "• <b>Aislamiento:</b> Rotura de puente térmico total coordinada con el garaje\n"
-                "• <b>Accesorios:</b> Tiradores de acero inoxidable y cerraduras inteligentes"
+                "<b>Serie:</b> Estilo clásico tradicional Carriage House\n"
+                "• <b>Diseño:</b> Herrajes decorativos y ventanas superiores integradas\n"
+                "• <b>Aislamiento:</b> Poliuretano térmico de alta densidad\n"
+                "• <b>Sellado:</b> Juntas de compresión perimetrales resistentes al clima"
             )
         }
     },
@@ -246,11 +179,10 @@ CATALOG_ITEMS = [
         "en": {
             "title": "Commercial Heavy-Duty Sectional",
             "desc": (
-                "<b>Series:</b> Industrial Logistics & Warehouses\n"
+                "<b>Series:</b> Industrial Logistics &amp; Warehouses\n"
                 "• <b>Rating:</b> Continuous duty 100,000 cycles springs\n"
                 "• <b>Steel:</b> Heavy 20-gauge hot-dipped galvanized steel panels\n"
-                "• <b>Operator:</b> Compatible with LiftMaster 3-phase industrial openers\n"
-                "• <b>Compliance:</b> Full California commercial safety standards"
+                "• <b>Operator:</b> Compatible with LiftMaster 3-phase industrial openers"
             )
         },
         "ru": {
@@ -259,8 +191,7 @@ CATALOG_ITEMS = [
                 "<b>Серия:</b> Промышленные ворота для складов и логистических хабов\n"
                 "• <b>Ресурс:</b> 100 000 циклов непрерывной эксплуатации\n"
                 "• <b>Сталь:</b> Оцинкованная сталь 20-го калибра повышенной толщины\n"
-                "• <b>Привод:</b> Прямое подключение 3-фазных моторов LiftMaster\n"
-                "• <b>Стандарты:</b> Сертификация коммерческой безопасности Калифорнии"
+                "• <b>Привод:</b> Прямое подключение 3-фазных моторов LiftMaster"
             )
         },
         "es": {
@@ -269,8 +200,7 @@ CATALOG_ITEMS = [
                 "<b>Serie:</b> Puertas industriales para almacenes y talleres\n"
                 "• <b>Resistencia:</b> 100,000 ciclos de apertura continua\n"
                 "• <b>Acero:</b> Paneles de acero galvanizado calibre 20 de alta resistencia\n"
-                "• <b>Automatización:</b> Compatible con motores trifásicos LiftMaster\n"
-                "• <b>Normativa:</b> Cumplimiento estricto de códigos comerciales de California"
+                "• <b>Automatización:</b> Compatible con motores trifásicos LiftMaster"
             )
         }
     },
@@ -292,17 +222,17 @@ CATALOG_ITEMS = [
             "desc": (
                 "<b>Серия:</b> Компактные рулонные бронированные ворота\n"
                 "• <b>Защита:</b> Взаимозацепляемые стальные ламели высокой жесткости\n"
-                "• <b>Габариты:</b> Компактный верхний рулон, потолок остается свободным\n"
-                "• <b>Применение:</b> Автосервисы, погрузочные зоны, склады с погрузчиками"
+                "• <b>Габариты:</b> Компактный верхний рулон, потолок свободен от балок\n"
+                "• <b>Применение:</b> Автосервисы, погрузочные зоны, склады"
             )
         },
         "es": {
             "title": "Puertas Enrollables de Acero",
             "desc": (
                 "<b>Serie:</b> Seguridad enrollable de máxima resistencia\n"
-                "• <b>Seguridad:</b> Lamas de acero entrelazadas para protección antirrobo\n"
-                "• <b>Espacio:</b> Enrollamiento compacto en dintel sin rieles en techo\n"
-                "• <b>Ideal para:</b> Muelles de carga, comercios y áreas de montacargas"
+                "• <b>Seguridad:</b> Lamas de acero entrelazadas para protección\n"
+                "• <b>Espacio:</b> Enrollamiento superior compacto sin rieles en techo\n"
+                "• <b>Ideal para:</b> Muelles de carga, comercios y talleres"
             )
         }
     },
@@ -324,8 +254,8 @@ CATALOG_ITEMS = [
             "desc": (
                 "<b>Серия:</b> Скоростные вентилируемые защитные системы\n"
                 "• <b>Скорость:</b> Быстрый подъем/опускание при плотном трафике машин\n"
-                "• <b>Воздухообмен:</b> Непрерывная циркуляция воздуха без риска проникновения\n"
-                "• <b>Применение:</b> Подземные паркинги, автосалоны, торговые галереи"
+                "• <b>Воздухообмен:</b> Постоянная циркуляция воздуха без риска проникновения\n"
+                "• <b>Применение:</b> Паркинги, автосалоны, коммерческие въезды"
             )
         },
         "es": {
@@ -334,7 +264,7 @@ CATALOG_ITEMS = [
                 "<b>Serie:</b> Control perimetral de alta frecuencia\n"
                 "• <b>Velocidad:</b> Ciclo rápido para intenso tránsito vehicular\n"
                 "• <b>Ventilación:</b> Máxima visibilidad y flujo de aire continuo\n"
-                "• <b>Uso:</b> Estacionamientos subterráneos y concesionarios"
+                "• <b>Uso:</b> Estacionamientos subterráneos y accesos comerciales"
             )
         }
     },
@@ -347,8 +277,8 @@ CATALOG_ITEMS = [
             "desc": (
                 "<b>Series:</b> Heavy Commercial Direct-Drive Openers\n"
                 "• <b>Duty:</b> Continuous 24/7 duty cycle rated motor\n"
-                "• <b>Safety:</b> Optical safety light curtains & monitored reversing\n"
-                "• <b>Connectivity:</b> myQ Facility cloud management & access tracking"
+                "• <b>Safety:</b> Optical safety light curtains &amp; monitored reversing\n"
+                "• <b>Connectivity:</b> myQ Facility cloud management &amp; access tracking"
             )
         },
         "ru": {
@@ -553,23 +483,21 @@ I18N = {
 }
 
 # ==========================================
-# 3. FSM (СОСТОЯНИЯ ДЛЯ ЗАЯВКИ И ЯЗЫКА)
+# 3. FSM (СОСТОЯНИЯ)
 # ==========================================
 class OrderForm(StatesGroup):
-    choosing_lang = State()
     waiting_for_name = State()
     waiting_for_phone = State()
     waiting_for_city = State()
     waiting_for_details = State()
 
-# Хранилище языка пользователя по chat_id
 USER_LANG: Dict[int, str] = {}
 
 def get_lang(user_id: int) -> str:
     return USER_LANG.get(user_id, "en")
 
 # ==========================================
-# 4. ГЕНЕРАТОРЫ КЛАВИАТУР
+# 4. КЛАВИАТУРЫ
 # ==========================================
 def get_language_inline_kb() -> InlineKeyboardMarkup:
     kb = [
@@ -626,8 +554,6 @@ def get_cancel_kb(lang: str) -> ReplyKeyboardMarkup:
 @dp.message(CommandStart())
 async def cmd_start(message: Message, state: FSMContext):
     await state.clear()
-    
-    # Приветствие с выбором языка
     intro_text = (
         "<b>FORTA / Architectural Garage Systems</b>\n"
         "<i>Sacramento • Roseville • Folsom • El Dorado Hills</i>\n\n"
@@ -644,7 +570,10 @@ async def process_language_select(call: CallbackQuery, state: FSMContext):
     await state.update_data(lang=lang)
     
     t = I18N[lang]
-    await call.message.delete()
+    try:
+        await call.message.delete()
+    except Exception:
+        pass
     await call.message.answer(t["welcome"], parse_mode=ParseMode.HTML, reply_markup=get_main_reply_kb(lang))
     await call.answer()
 
@@ -668,7 +597,7 @@ async def cancel_handler(message: Message, state: FSMContext):
     await message.answer(t["cancelled"], reply_markup=get_main_reply_kb(lang))
 
 # ==========================================
-# 6. КАТАЛОГ С ФОТОГРАФИЯМИ И ЛИСТАЛКОЙ
+# 6. КАТАЛОГ ВОРОТ (С ЗАЩИТОЙ ОТ СБОЕВ СЕТИ)
 # ==========================================
 @dp.message(F.text.in_(["🚪 Door Catalog", "🚪 Каталог ворот", "🚪 Catálogo de Puertas"]))
 async def show_catalog(message: Message):
@@ -677,12 +606,20 @@ async def show_catalog(message: Message):
     data = item.get(lang, item["en"])
     caption = f"<b>{data['title']}</b>\n\n{data['desc']}"
     
-    await message.answer_photo(
-        photo=item["photo"],
-        caption=caption,
-        parse_mode=ParseMode.HTML,
-        reply_markup=get_catalog_inline_kb(0, item["id"], lang)
-    )
+    try:
+        await message.answer_photo(
+            photo=item["photo"],
+            caption=caption,
+            parse_mode=ParseMode.HTML,
+            reply_markup=get_catalog_inline_kb(0, item["id"], lang)
+        )
+    except Exception as e:
+        logger.warning(f"Failed to send image directly, falling back: {e}")
+        await message.answer(
+            f"{caption}\n\n🔗 <i>Photo Preview:</i> {item['photo']}",
+            parse_mode=ParseMode.HTML,
+            reply_markup=get_catalog_inline_kb(0, item["id"], lang)
+        )
 
 @dp.callback_query(F.data.startswith("cat_nav:"))
 async def catalog_navigate(call: CallbackQuery):
@@ -692,8 +629,15 @@ async def catalog_navigate(call: CallbackQuery):
     data = item.get(lang, item["en"])
     caption = f"<b>{data['title']}</b>\n\n{data['desc']}"
 
-    media = InputMediaPhoto(media=item["photo"], caption=caption, parse_mode=ParseMode.HTML)
-    await call.message.edit_media(media=media, reply_markup=get_catalog_inline_kb(idx, item["id"], lang))
+    try:
+        media = InputMediaPhoto(media=item["photo"], caption=caption, parse_mode=ParseMode.HTML)
+        await call.message.edit_media(media=media, reply_markup=get_catalog_inline_kb(idx, item["id"], lang))
+    except Exception as e:
+        logger.warning(f"Error editing media in catalog: {e}")
+        try:
+            await call.message.edit_caption(caption=caption, parse_mode=ParseMode.HTML, reply_markup=get_catalog_inline_kb(idx, item["id"], lang))
+        except Exception:
+            pass
     await call.answer()
 
 @dp.callback_query(F.data == "noop")
@@ -829,20 +773,18 @@ async def process_details(message: Message, state: FSMContext):
     user_city = data.get("user_city", "Not provided")
     username = f"@{message.from_user.username}" if message.from_user.username else "no username"
 
-    # Ответ клиенту на выбранном языке
     await message.answer(t["order_success"], parse_mode=ParseMode.HTML, reply_markup=get_main_reply_kb(lang))
 
-    # Уведомление диспетчеру (на русском/английском с флагом выбранного языка)
     admin_alert = (
         f"🚨 <b>НОВАЯ ЗАЯВКА / FORTA DISPATCH</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━\n"
-        f"🌐 <b>Язык клиента:</b> {lang.upper()}\n"
+        f"🌐 <b>Язык:</b> {lang.upper()}\n"
         f"🛠 <b>Услуга/Модель:</b> {order_type}\n"
         f"👤 <b>Имя:</b> {user_name}\n"
         f"📞 <b>Телефон:</b> <code>{user_phone}</code>\n"
         f"📍 <b>Локация / ZIP:</b> {user_city}\n"
         f"💬 <b>Детали:</b> {details}\n"
-        f"👤 <b>Профиль Telegram:</b> {username} (ID: <code>{message.from_user.id}</code>)\n"
+        f"👤 <b>Профиль:</b> {username} (ID: <code>{message.from_user.id}</code>)\n"
         f"━━━━━━━━━━━━━━━━━━━━"
     )
 
@@ -855,7 +797,7 @@ async def process_details(message: Message, state: FSMContext):
 # 9. ТОЧКА ВХОДА
 # ==========================================
 async def main():
-    logger.info("FORTA Multi-Language Bot starting...")
+    logger.info("FORTA Bot running with verified JPG photo assets...")
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
