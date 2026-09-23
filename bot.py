@@ -33,7 +33,7 @@ bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
 
 # ==========================================
-# 1. ПРОВЕРЕННЫЙ КАТАЛОГ С ПОДДЕРЖИВАЕМЫМИ JPG/PNG ФОТО
+# 1. КАТАЛОГ С ПОДДЕРЖИВАЕМЫМИ JPG/PNG ФОТО
 # ==========================================
 CATALOG_ITEMS = [
     {
@@ -310,14 +310,12 @@ I18N = {
         "welcome": (
             "<b>FORTA / Architectural Garage Systems</b>\n"
             "<i>European Hörmann engineering &amp; American LiftMaster automation.</i>\n\n"
-            "• <b>24/7 Emergency Dispatch:</b> 45–60 min arrival (broken springs/cables)\n"
-            "• <b>1-Visit Resolution:</b> Fully stocked mobile technician trucks\n"
+            "• <b>Professional Service:</b> Same-day dispatch across Sacramento County\n"
             "• <b>Whisper-Quiet:</b> Direct-drive wall-mount openers (&lt;45 dB)\n"
             "• <b>Coverage:</b> Sacramento, Roseville, Rocklin, Folsom &amp; El Dorado Hills\n\n"
             "Select an option from the menu below:"
         ),
         "menu_catalog": "🚪 Door Catalog",
-        "menu_emergency": "🚨 Emergency Repair 24/7",
         "menu_automation": "⚡ LiftMaster Openers",
         "menu_contacts": "📍 Service Area & Contacts",
         "menu_quote": "📝 Request Quote / Service",
@@ -325,15 +323,6 @@ I18N = {
         "catalog_nav_prev": "◀️ Prev",
         "catalog_nav_next": "Next ▶️",
         "catalog_btn_order": "📝 Request Quote for this Model",
-        "emergency_title": "🚨 <b>24/7 EMERGENCY ON-SITE DISPATCH</b>",
-        "emergency_body": (
-            "• <b>Average Arrival Time:</b> 45–60 minutes in Sacramento region\n"
-            "• <b>Parts in Stock:</b> 50K-cycle torsion springs, cables, nylon rollers\n"
-            "• <b>Same-Day Resolution:</b> Fixed in 1 visit\n\n"
-            "📞 Dispatch Phone: <b>+1 (279) 214-3077</b>"
-        ),
-        "emergency_btn_call": "📞 Call Technician Now",
-        "emergency_btn_order": "🚨 Request Immediate Dispatch",
         "automation_title": "⚡ <b>LiftMaster Direct-Drive Systems</b>",
         "automation_body": (
             "• <b>Wall-Mount Design:</b> Eliminates ceiling rail rattles\n"
@@ -345,10 +334,10 @@ I18N = {
         "automation_btn_order": "📝 Order LiftMaster Installation",
         "contacts_title": "📍 <b>FORTA / Service & Coverage</b>",
         "contacts_body": (
-            "• <b>Direct Phone:</b> +1 (279) 214-3077 (24/7 Line)\n"
+            "• <b>Direct Phone:</b> +1 (279) 214-3077\n"
             "• <b>Email:</b> company.forta.usa@gmail.com\n"
             "• <b>Official Site:</b> https://forta-usa.com\n"
-            "• <b>Service Hours:</b> Mon–Sat: 9:00 AM – 5:00 PM (Emergency 24/7)\n\n"
+            "• <b>Service Hours:</b> Mon–Sat: 9:00 AM – 5:00 PM\n\n"
             "<b>Service Areas:</b>\n"
             "Sacramento, Roseville, Rocklin, Folsom, El Dorado Hills, Granite Bay, Fair Oaks."
         ),
@@ -359,7 +348,7 @@ I18N = {
         "order_ask_details": "Please describe your project or issue (or type '-' to skip):",
         "order_success": (
             "✅ <b>Your request has been received by FORTA Dispatch!</b>\n\n"
-            "Our technician will contact you within 5–15 minutes to confirm the appointment."
+            "Our technician will contact you within 5–15 minutes."
         ),
         "btn_cancel": "❌ Cancel",
         "cancelled": "Operation cancelled."
@@ -368,14 +357,12 @@ I18N = {
         "welcome": (
             "<b>FORTA / Архитектурные гаражные ворота</b>\n"
             "<i>Немецкие системы Hörmann и американская автоматика LiftMaster.</i>\n\n"
-            "• <b>Аварийный выезд 24/7:</b> 45–60 минут (лопнувшие пружины, обрыв тросов)\n"
-            "• <b>Ремонт за 1 визит:</b> Склад сертифицированных запчастей прямо в траке\n"
+            "• <b>Профессиональный сервис:</b> Выезд мастеров по Сакраменто и округам\n"
             "• <b>Бесшумный ход:</b> Настенные приводы прямого монтажа (&lt;45 dB)\n"
             "• <b>Округа обслуживания:</b> Sacramento, Roseville, Rocklin, Folsom, El Dorado Hills\n\n"
             "Выберите интересующий пункт в меню ниже:"
         ),
         "menu_catalog": "🚪 Каталог ворот",
-        "menu_emergency": "🚨 Срочный ремонт 24/7",
         "menu_automation": "⚡ Автоматика LiftMaster",
         "menu_contacts": "📍 Зона выезда и контакты",
         "menu_quote": "📝 Заказать расчет / Вызов",
@@ -383,15 +370,6 @@ I18N = {
         "catalog_nav_prev": "◀️ Назад",
         "catalog_nav_next": "Вперед ▶️",
         "catalog_btn_order": "📝 Заказать расчет этой модели",
-        "emergency_title": "🚨 <b>АВАРИЙНЫЙ ВЫЕЗД ДЕЖУРНОГО МАСТЕРА 24/7</b>",
-        "emergency_body": (
-            "• <b>Время прибытия:</b> 45–60 минут по региону Сакраменто\n"
-            "• <b>Запчасти в наличии:</b> Пружины на 50 000 циклов, тросы, ролики\n"
-            "• <b>Решение за 1 визит:</b> Устранение аварии в день обращения\n\n"
-            "📞 Телефон дежурного: <b>+1 (279) 214-3077</b>"
-        ),
-        "emergency_btn_call": "📞 Позвонить дежурному мастеру",
-        "emergency_btn_order": "🚨 Оформить срочный выезд",
         "automation_title": "⚡ <b>Системы приводов LiftMaster Direct-Drive</b>",
         "automation_body": (
             "• <b>Настенный монтаж:</b> Убирает дребезжащие потолочные направляющие\n"
@@ -403,10 +381,10 @@ I18N = {
         "automation_btn_order": "📝 Заказать установку автоматики",
         "contacts_title": "📍 <b>FORTA / Контакты и сервис</b>",
         "contacts_body": (
-            "• <b>Телефон:</b> +1 (279) 214-3077 (Линия 24/7)\n"
+            "• <b>Телефон:</b> +1 (279) 214-3077\n"
             "• <b>Email:</b> company.forta.usa@gmail.com\n"
             "• <b>Сайт:</b> https://forta-usa.com\n"
-            "• <b>Часы работы:</b> Пн–Сб: 9:00 – 17:00 (Аварийная служба 24/7)\n\n"
+            "• <b>Часы работы:</b> Пн–Сб: 9:00 – 17:00\n\n"
             "<b>Города обслуживания:</b>\n"
             "Sacramento, Roseville, Rocklin, Folsom, El Dorado Hills, Granite Bay, Fair Oaks."
         ),
@@ -414,10 +392,10 @@ I18N = {
         "order_ask_phone": "Пожалуйста, нажмите кнопку ниже для отправки номера или введите его вручную:",
         "btn_send_contact": "📱 Поделиться контактом",
         "order_ask_city": "В каком городе или районе вы находитесь? (например: Folsom 95630, Roseville, Sacramento):",
-        "order_ask_details": "Опишите подробности задачи или поломки (или отправьте '-', если нет комментария):",
+        "order_ask_details": "Опишите подробности задачи (или отправьте '-', если нет комментария):",
         "order_success": (
-            "✅ <b>Ваша заявка передана дежурному диспетчеру FORTA!</b>\n\n"
-            "Мастер свяжется с вами в течение 5–15 минут для подтверждения времени выезда."
+            "✅ <b>Ваша заявка передана диспетчеру FORTA!</b>\n\n"
+            "Мастер свяжется с вами в течение 5–15 минут."
         ),
         "btn_cancel": "❌ Отмена",
         "cancelled": "Действие отменено."
@@ -426,14 +404,12 @@ I18N = {
         "welcome": (
             "<b>FORTA / Puertas de Garaje Arquitectónicas</b>\n"
             "<i>Ingeniería alemana Hörmann y automatización americana LiftMaster.</i>\n\n"
-            "• <b>Servicio de Emergencia 24/7:</b> Llegada en 45–60 min (muelles y cables rotos)\n"
-            "• <b>Solución en 1 Visita:</b> Camiones equipados con repuestos originales\n"
+            "• <b>Servicio Profesional:</b> Asistencia en todo el condado de Sacramento\n"
             "• <b>Silencio Absoluto:</b> Motores de montaje lateral ultra silenciosos (&lt;45 dB)\n"
             "• <b>Área de Cobertura:</b> Sacramento, Roseville, Rocklin, Folsom y El Dorado Hills\n\n"
             "Seleccione una opción del menú:"
         ),
         "menu_catalog": "🚪 Catálogo de Puertas",
-        "menu_emergency": "🚨 Reparación Urgente 24/7",
         "menu_automation": "⚡ Motores LiftMaster",
         "menu_contacts": "📍 Zonas de Servicio y Contacto",
         "menu_quote": "📝 Solicitar Presupuesto / Visita",
@@ -441,15 +417,6 @@ I18N = {
         "catalog_nav_prev": "◀️ Anterior",
         "catalog_nav_next": "Siguiente ▶️",
         "catalog_btn_order": "📝 Cotizar este Modelo",
-        "emergency_title": "🚨 <b>SERVICIO DE ASISTENCIA TÉCNICA URGENTE 24/7</b>",
-        "emergency_body": (
-            "• <b>Tiempo Estimado:</b> 45–60 minutos en la región de Sacramento\n"
-            "• <b>Repuestos en Stock:</b> Muelles de torsión de 50,000 ciclos y cables\n"
-            "• <b>Reparación Inmediata:</b> Resuelto en la primera visita\n\n"
-            "📞 Teléfono directo: <b>+1 (279) 214-3077</b>"
-        ),
-        "emergency_btn_call": "📞 Llamar al Técnico Ahora",
-        "emergency_btn_order": "🚨 Solicitar Visita Urgente",
         "automation_title": "⚡ <b>Sistemas de Automatización LiftMaster Direct-Drive</b>",
         "automation_body": (
             "• <b>Montaje en Pared:</b> Libera espacio y elimina ruidos de rieles\n"
@@ -461,10 +428,10 @@ I18N = {
         "automation_btn_order": "📝 Solicitar Instalación LiftMaster",
         "contacts_title": "📍 <b>FORTA / Contacto y Cobertura</b>",
         "contacts_body": (
-            "• <b>Teléfono:</b> +1 (279) 214-3077 (Línea 24/7)\n"
+            "• <b>Teléfono:</b> +1 (279) 214-3077\n"
             "• <b>Correo:</b> company.forta.usa@gmail.com\n"
             "• <b>Sitio Web:</b> https://forta-usa.com\n"
-            "• <b>Horario:</b> Lun–Sáb: 9:00 – 17:00 (Emergencias 24/7)\n\n"
+            "• <b>Horario:</b> Lun–Sáb: 9:00 – 17:00\n\n"
             "<b>Áreas de Cobertura:</b>\n"
             "Sacramento, Roseville, Rocklin, Folsom, El Dorado Hills, Granite Bay, Fair Oaks."
         ),
@@ -472,10 +439,10 @@ I18N = {
         "order_ask_phone": "Por favor pulse el botón inferior para enviar su teléfono o escríbalo:",
         "btn_send_contact": "📱 Compartir Teléfono",
         "order_ask_city": "¿En qué ciudad o código postal se encuentra? (ej. Folsom 95630, Roseville, Sacramento):",
-        "order_ask_details": "Describa brevemente la reparación o modelo deseado (o envíe '-' para omitir):",
+        "order_ask_details": "Describa brevemente lo que necesita (o envíe '-' para omitir):",
         "order_success": (
-            "✅ <b>¡Su solicitud ha sido enviada al técnico de guardia de FORTA!</b>\n\n"
-            "Nos comunicaremos con usted en 5–15 minutos para coordinar la visita."
+            "✅ <b>¡Su solicitud ha sido enviada al equipo de FORTA!</b>\n\n"
+            "Nos comunicaremos con usted en 5–15 minutos."
         ),
         "btn_cancel": "❌ Cancelar",
         "cancelled": "Operación cancelada."
@@ -512,9 +479,9 @@ def get_language_inline_kb() -> InlineKeyboardMarkup:
 def get_main_reply_kb(lang: str) -> ReplyKeyboardMarkup:
     t = I18N[lang]
     kb = [
-        [KeyboardButton(text=t["menu_catalog"]), KeyboardButton(text=t["menu_emergency"])],
-        [KeyboardButton(text=t["menu_automation"]), KeyboardButton(text=t["menu_contacts"])],
-        [KeyboardButton(text=t["menu_quote"]), KeyboardButton(text=t["menu_lang"])]
+        [KeyboardButton(text=t["menu_catalog"]), KeyboardButton(text=t["menu_automation"])],
+        [KeyboardButton(text=t["menu_contacts"]), KeyboardButton(text=t["menu_quote"])],
+        [KeyboardButton(text=t["menu_lang"])]
     ]
     return ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
 
@@ -597,7 +564,7 @@ async def cancel_handler(message: Message, state: FSMContext):
     await message.answer(t["cancelled"], reply_markup=get_main_reply_kb(lang))
 
 # ==========================================
-# 6. КАТАЛОГ ВОРОТ (С ЗАЩИТОЙ ОТ СБОЕВ СЕТИ)
+# 6. КАТАЛОГ ВОРОТ
 # ==========================================
 @dp.message(F.text.in_(["🚪 Door Catalog", "🚪 Каталог ворот", "🚪 Catálogo de Puertas"]))
 async def show_catalog(message: Message):
@@ -614,7 +581,7 @@ async def show_catalog(message: Message):
             reply_markup=get_catalog_inline_kb(0, item["id"], lang)
         )
     except Exception as e:
-        logger.warning(f"Failed to send image directly, falling back: {e}")
+        logger.warning(f"Fallback to text preview: {e}")
         await message.answer(
             f"{caption}\n\n🔗 <i>Photo Preview:</i> {item['photo']}",
             parse_mode=ParseMode.HTML,
@@ -633,7 +600,7 @@ async def catalog_navigate(call: CallbackQuery):
         media = InputMediaPhoto(media=item["photo"], caption=caption, parse_mode=ParseMode.HTML)
         await call.message.edit_media(media=media, reply_markup=get_catalog_inline_kb(idx, item["id"], lang))
     except Exception as e:
-        logger.warning(f"Error editing media in catalog: {e}")
+        logger.warning(f"Error updating catalog media: {e}")
         try:
             await call.message.edit_caption(caption=caption, parse_mode=ParseMode.HTML, reply_markup=get_catalog_inline_kb(idx, item["id"], lang))
         except Exception:
@@ -645,21 +612,8 @@ async def noop_click(call: CallbackQuery):
     await call.answer()
 
 # ==========================================
-# 7. АВАРИЙНЫЙ РЕМОНТ И АВТОМАТИКА
+# 7. АВТОМАТИКА И КОНТАКТЫ
 # ==========================================
-@dp.message(F.text.in_(["🚨 Emergency Repair 24/7", "🚨 Срочный ремонт 24/7", "🚨 Reparación Urgente 24/7"]))
-async def emergency_service(message: Message, state: FSMContext):
-    await state.clear()
-    lang = get_lang(message.from_user.id)
-    t = I18N[lang]
-
-    text = f"{t['emergency_title']}\n\n{t['emergency_body']}"
-    kb = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text=t["emergency_btn_order"], callback_data="order_emergency")],
-        [InlineKeyboardButton(text=t["emergency_btn_call"], url="tel:12792143077")]
-    ])
-    await message.answer(text, parse_mode=ParseMode.HTML, reply_markup=kb)
-
 @dp.message(F.text.in_(["⚡ LiftMaster Openers", "⚡ Автоматика LiftMaster", "⚡ Motores LiftMaster"]))
 async def liftmaster_info(message: Message):
     lang = get_lang(message.from_user.id)
@@ -687,16 +641,6 @@ async def start_general_order(message: Message, state: FSMContext):
     await state.update_data(order_type="General Quote / Request", lang=lang)
     await state.set_state(OrderForm.waiting_for_name)
     await message.answer(t["order_ask_name"], reply_markup=get_cancel_kb(lang))
-
-@dp.callback_query(F.data == "order_emergency")
-async def start_emergency_order(call: CallbackQuery, state: FSMContext):
-    await state.clear()
-    lang = get_lang(call.from_user.id)
-    t = I18N[lang]
-    await state.update_data(order_type="🚨 24/7 EMERGENCY DISPATCH", lang=lang)
-    await state.set_state(OrderForm.waiting_for_name)
-    await call.message.answer(f"{t['emergency_title']}\n\n{t['order_ask_name']}", parse_mode=ParseMode.HTML, reply_markup=get_cancel_kb(lang))
-    await call.answer()
 
 @dp.callback_query(F.data == "order_automation")
 async def start_auto_order(call: CallbackQuery, state: FSMContext):
@@ -797,7 +741,7 @@ async def process_details(message: Message, state: FSMContext):
 # 9. ТОЧКА ВХОДА
 # ==========================================
 async def main():
-    logger.info("FORTA Bot running with verified JPG photo assets...")
+    logger.info("FORTA Clean Bot starting without emergency keyword triggers...")
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
